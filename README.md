@@ -1,10 +1,13 @@
 <p align="center">
-      <img src="" alt="My Pet Project" width="800" height="450">
+      <img src="https://i.ibb.co/BtCzJVc/freshok-store-preview.png" alt="My Pet Project" width="700" height="350">
+       <img src="https://i.ibb.co/1ffsNRp/preview-freshok-store.png" width="200" height="350">
 </p>
 
+
+
 <p align="center">
-   <img src="" alt="portfolio version">
-   <img src="" alt="License">
+   <img src="https://img.shields.io/badge/Version-v1.0(Alpha)-orange" alt="portfolio version">
+   <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
 </p>
 
 ## About
