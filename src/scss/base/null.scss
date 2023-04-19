@@ -23,7 +23,8 @@ body {
 }
 body {
 	color: $mainColor;
-	line-height: 1;
+	line-height: $lineHeight;
+	font-weight: $fontWeight;
 	font-family: $fontFamily;
 	font-size: $fontSize;
 	//text-rendering: optimizeLegibility;
