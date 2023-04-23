@@ -1,5 +1,82 @@
-<!--  BUTTONS -->
+<!-- BUTTONS -->
 <button type="button" class="button button_green-big">Купить сейчас</button>
 <button type="button" class="button button_green-small">Подписаться</button>
 <button type="button" class="button button_white">Показать еще</button>
 <button type="button" class="button button_dark">Поиск</button>
+
+<!-- USERS -->
+<div class="users">
+	<div class="users__items">
+
+		<div class="users__list">
+			<a href="" class="users__icon users__icon_user"></a>
+		</div>
+
+		<div class="users__list">
+			<a href="" class="users__icon users__icon_heart"></a>
+		</div>
+
+		<div class="users__list">
+			<a href="" class="users__icon users__icon_basket"></a>
+		</div>
+
+	</div>
+</div>
+
+.users {
+// .users__items
+&__items {
+}
+// .users__list
+&__list {
+}
+// .users__icon
+&__icon {
+color: #fff;
+// .users__icon_user
+&_user {
+&:before {
+@extend %ic;
+content: "\e916";
+font-size: rem(22);
+padding: 15px 17px;
+}
+}
+// .users__icon_heart
+&_heart {
+&:before {
+@extend %ic;
+content: "\e907";
+font-size: rem(22);
+padding: 20px 18px;
+}
+}
+// .users__icon_basket
+&_basket {
+&:before {
+@extend %ic;
+content: "\e905";
+font-size: rem(22);
+padding: 20px 18px;
+}
+}
+@media (any-hover: hover) {
+&:hover::before {
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 3px;
+color: #fff;
+}
+}
+&:focus::before {
+background-color: rgba(255, 255, 255, 0.1);
+box-shadow: inset 0px 0px 0px 3px #eff6e7;
+border-radius: 3px;
+}
+&:active::before {
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 3px;
+color: rgba(255, 255, 255, 0.5);
+box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 0.1);
+}
+}
+}

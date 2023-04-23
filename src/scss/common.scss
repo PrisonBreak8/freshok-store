@@ -1,1 +1,133 @@
 // Заголовки, общие БЭМ блоки и прочее...
+
+//========================================================================================================================================================
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+//========================================================================================================================================================
+.header-top {
+	background-color: $dark-800;
+	padding-top: rem(5);
+	padding-bottom: rem(5);
+}
+//========================================================================================================================================================
+.logo {
+	// .logo__link
+	&__link {
+		display: flex;
+		align-items: center;
+		column-gap: rem(14);
+		transition: opacity 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.9;
+			}
+		}
+		&:focus {
+			box-shadow: 0 0 0 rem(3) rgba(239, 246, 231, 0.7);
+			border-radius: rem(3);
+		}
+		&:active {
+			box-shadow: 0 0 0 rem(3) #eff6e7;
+			border-radius: rem(3);
+		}
+	}
+	// .logo__picture
+	&__picture {
+	}
+	// .logo__description
+	&__description {
+	}
+}
+//========================================================================================================================================================
+.search {
+	position: relative;
+	display: flex;
+	flex: 576px 0;
+	&:before {
+		@extend %ic;
+		content: "\e908";
+		position: absolute;
+		top: 50%;
+		left: 12px;
+		font-size: 20px;
+		transform: translateY(-50%);
+	}
+	// .search__input
+	&__input {
+		width: 100%;
+		display: block;
+		padding: 0px 15px 0 50px;
+		height: rem(50);
+		border-radius: rem(6) 0 0 rem(6);
+		&:focus {
+		}
+		&::placeholder {
+			font-size: rem(14);
+			letter-spacing: 0.03em;
+			color: #31352b;
+		}
+	}
+}
+//========================================================================================================================================================
+.users {
+	display: flex;
+	align-items: center;
+
+	// .users__lists
+	&__lists {
+		display: flex;
+		align-items: center;
+		column-gap: rem(24);
+		justify-content: flex-end;
+	}
+	// .users__list
+	&__list {
+	}
+	// .users__icon
+	&__icon {
+		color: $white;
+		// .users__icon_user
+		&_user {
+			&:before {
+				@extend %ic;
+				content: "\e916";
+				font-size: rem(32);
+			}
+		}
+		// .users__icon_heart
+		&_heart {
+			&:before {
+				@extend %ic;
+				content: "\e907";
+				font-size: rem(29);
+			}
+		}
+		// .users__icon_basket
+		&_basket {
+			&:before {
+				@extend %ic;
+				content: "\e905";
+				font-size: rem(31);
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+
+		&:active {
+			opacity: 0.5;
+		}
+	}
+}

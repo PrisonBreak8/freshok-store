@@ -1,3 +1,125 @@
-//====================================================================================================
+//==== HEADER TOP ================================================================================================
+.header {
+	width: 100%;
+	z-index: 100;
+	// .header__container
+	&__container {
+	}
+	// .header__menu
+	&__menu {
+		color: $white;
+		font-weight: 700;
+		font-size: rem(13);
+		letter-spacing: 0.03em;
+		line-height: math.div(18, 13);
+		text-transform: uppercase;
+	}
+}
 
-//====================================================================================================
+.menu {
+	// .menu__body
+	&__body {
+		min-height: rem(40);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: rem(15);
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		column-gap: rem(48);
+		row-gap: rem(10);
+	}
+	// .menu__item
+	&__item {
+	}
+	// .menu__link
+	&__link {
+		display: flex;
+		align-items: center;
+		column-gap: rem(12);
+		transition: opacity 0.2s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+		&:focus {
+			box-shadow: 0 0 0 rem(3) #eff6e7;
+			border-radius: rem(3);
+		}
+		&:active {
+			color: #e0edcf;
+		}
+		// .menu__link_delivery
+		&_delivery {
+			&:before {
+				@extend %ic;
+				content: "\e906";
+				font-size: rem(22);
+			}
+		}
+		// .menu__link_communication
+		&_communication {
+			&:before {
+				@extend %ic;
+				content: "\e909";
+				font-size: rem(22);
+			}
+		}
+	}
+	// .menu__about-us
+	&__about-us {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		column-gap: rem(24);
+		row-gap: rem(10);
+	}
+	// .menu__ref
+	&__ref {
+		transition: opacity 0.2s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+		&:focus {
+			box-shadow: 0 0 0 rem(3) #eff6e7;
+			border-radius: rem(3);
+		}
+		&:active {
+			color: #e0edcf;
+		}
+	}
+}
+//===== HEADER BOTTOM ===============================================================================================
+.header-bottom {
+	background-color: $green-900;
+	padding-top: rem(5);
+	padding-bottom: rem(5);
+	// .header-bottom__container
+	&__container {
+	}
+	// .header-bottom__body
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: rem(100);
+		column-gap: rem(20);
+	}
+	// .header-bottom__logo
+	&__logo {
+	}
+	// .header-bottom__select
+	&__select {
+	}
+	// .header-bottom__search
+	&__search {
+	}
+}
